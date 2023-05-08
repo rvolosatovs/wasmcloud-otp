@@ -399,7 +399,8 @@ jobs:
         with:
           name: wasmcloud_host_x86_64_windows
           path: wasmcloud_host_x86_64_windows.exe
-
+      - run: chmod +x ./host_core_*
+      - run: chmod +x ./wasmcloud_host_*
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
